@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <!--        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <title>London ReviewR</title>
+</head>
+
+<body>
+    <section data-role="page" id="showPage" class="active">
+        <ul id="list"></ul>
+    </section>
+
+
+    <section data-role="page" id="detailsPage" class="inactive">
+        <div id="details">
+            <img src=""/>
+            <h4></h4>
+            <h5></h5>
+            <p></p>
+        </div>
+    </section>
+    <section data-role="page" id="addPage" class="inactive">
+        <h1>Add Review</h1>
+        <div class="button-wrapper">
+            <button id="picBtn">Take Pic</button>
+        </div>
+     
+        <img src="" alt="" id="image">
+        <div class="form-wrapper">
+            <form action="">       
+                <label for="reviewTitle" class="title_label">Title</label>
+                <input type="text" name="reviewTitle" id="reviewTitle">
+                <label for="reviewText" class="title_label">Review</label>
+                <input type="text" name="reviewText" id="reviewText">
+                
+                <label for="reviewRating" class="title_label">Rating</label>
+                <input type="number" name="reviewRating" id="reviewRating" max=5>
+<div class="stars">
+  <form action="">
+    <input class="star star-5" id="star-5" type="radio" name="star"/>
+    <label class="star star-5" for="star-5"></label>
+    <input class="star star-4" id="star-4" type="radio" name="star"/>
+    <label class="star star-4" for="star-4"></label>
+    <input class="star star-3" id="star-3" type="radio" name="star"/>
+    <label class="star star-3" for="star-3"></label>
+    <input class="star star-2" id="star-2" type="radio" name="star"/>
+    <label class="star star-2" for="star-2"></label>
+    <input class="star star-1" id="star-1" type="radio" name="star"/>
+    <label class="star star-1" for="star-1"></label>
+  </form>
+</div>
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+      
+       
+       <ol id="#navig">
+         <li class="list"> <a id="addBtn">Add Review</a></li>
+  <li class="list"><a id="backBtn">Back</a></li>
+
+ 
+</ol>
+        </nav>
+    </footer>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
